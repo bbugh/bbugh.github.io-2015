@@ -1,0 +1,61 @@
+/* quote css based on http://firefreebies.com/other-stuff/quote-htmlcss-sources/ */
+.quote .quote-photo {
+  background: url(images/photo-bg.png) no-repeat center;
+  margin-right: 6px;
+  position: relative;
+  float: left;
+}
+.quote .quote-photo img {
+  max-width: 115px;
+  max-height: 115px;
+  overflow: hidden;
+  position: absolute;
+}
+.quote .quote-photo img.photo-bg {
+  z-index: 1
+}
+.quote .quote-photo img.photo {
+  left: 0
+}
+.quote p.content {
+  /*font-style: italic;*/
+  line-height: 24px;
+  padding-left: 19px;
+  margin-left: 121px;
+  position: relative;
+  overflow: hidden;
+}
+.quote p.content span.laquo {
+  background: url(images/laquo.png) no-repeat;
+  width: 14px;
+  height: 11px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  display: block;
+}
+.quote p.content span.raquo {
+  background: url(images/raquo.png) no-repeat right 4px;
+  width: 13px;
+  height: 15px;
+  padding-left: 4px;
+  display: inline-block;
+}
+.quote .sign {
+  text-align: right;
+  float: right;
+}
+.quote .sign a {
+  color: #577302;
+  font-size: 13px;
+  text-decoration: none;
+}
+.quote .sign a:hover {
+  text-decoration: underline
+}
+.quote .sign p {
+  color: #5a5a5a;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 6px;
+}
