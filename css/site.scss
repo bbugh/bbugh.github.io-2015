@@ -1,0 +1,136 @@
+---
+---
+
+@import "variables";
+@import "bootstrap";
+@import "bootstrap-social";
+
+.text-inverse {
+  color: $inverse-text-color;
+}
+
+.jumbotron {
+  background: url("/images/header.jpg") no-repeat fixed center / cover;
+}
+
+.footer {
+  background: url("/images/contact-me.jpg") no-repeat center top / cover;
+}
+
+.container {
+  margin-bottom: $jumbotron-padding;
+}
+
+.programming {
+  color: $programming-color;
+}
+
+.education {
+  color: $education-color;
+}
+
+.public-speaking {
+  color: $public-speaking-color;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// blockquote {
+//   // background: #f9f9f9;
+//   // border-left: 10px solid #ccc;
+//   border-left: 0;
+//   margin: 1.5em 10px;
+//   padding: 0.5em 10px;
+//   quotes: "\201C""\201D""\2018""\2019";
+// }
+
+blockquote {
+  margin: 0.25em 0;
+  padding: 0.25em 40px;
+  line-height: 1.45;
+  position: relative;
+  border: 0;
+}
+
+blockquote:before {
+  display: block;
+  content: open-quote;
+  font-size: 80px;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  color: #7a7a7a;
+  color: $inverse-text-color;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+blockquote footer {
+  text-align: right;
+  color: $inverse-text-color;
+}
+
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 10px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 50%;
+  border-width: 2px;
+  background-color: transparent;
+  color: $inverse-text-color;
+  border-color: $inverse-text-color;
+}
+
+// for the bottom icons to be centered as 3 columns
+// taken from here: http://www.bootply.com/X16uMZOfoO#
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.social {
+  color: $inverse-text-color;
+  padding: 5px;
+
+  -webkit-transition: background .5s ease-out;
+  -moz-transition: background .5s ease-out;
+  -o-transition: background .5s ease-out;
+  transition: background .5s ease-out;
+
+  font-size: 1.6em;
+}
+
+.social a {
+  color: $inverse-text-color;
+}
+
+@mixin socialize($network, $color) {
+  .social-#{$network} {
+    background-color: rgba($color, 0.8);
+  }
+  .social-#{$network}:hover {
+    background-color: rgba($color, 1);
+  }
+}
+
+@include socialize(facebook, $social-color-facebook);
+@include socialize(twitter, $social-color-twitter);
+@include socialize(linkedin, $social-color-linkedin);
+@include socialize(github, $social-color-github);
